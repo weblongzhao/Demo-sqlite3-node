@@ -2,14 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>comments</title>
     <link rel="stylesheet" href="css/css.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-<form action="../api/form" method="post">
-    <input type="text">
-    <input type="submit" name="提交">
-</form>
+    <div class="comments-container">
+        <h2>comments</h2>
+        <div class="post clearfix">
+            <img class="avatar" src="http://p4ik510sj.bkt.clouddn.com/18-7-12/67501490.jpg" alt="">
+            <div class="content clearfix">
+                <div class="title clearfix">
+                    <span class="nick">Jonno Riekwel</span>
+                    <span class="time">17/09/2010</span>
+                </div>
+                <textarea class="text-area" type=""></textarea>
+                <button class="post-btn" type="button">Post</button>
+            </div>
+        </div>
+        <ul class="">
+            <li class="item">
+                <img class="avatar" src="http://p4ik510sj.bkt.clouddn.com/18-7-12/67501490.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        <span class="nick">Jonno Riekwel</span>
+                        <span class="time">17/09/2010</span>
+                    </div>
+                    <p>
+                        hello world This my comment.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 <script src="js/js.js"></script>
 </html>

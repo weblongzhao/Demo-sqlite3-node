@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>comments</title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="comments-container">
+  <h2>comments</h2>
+  <div class="post clearfix">
+    <img class="avatar" src="http://p4ik510sj.bkt.clouddn.com/18-7-12/67501490.jpg" alt="">
+    <!--<form action="/api/submit" method="POST">-->
+      <div class="content clearfix">
+        <div class="title clearfix">
+          <span class="nick">Jonno Riekwel</span>
+          <span class="time">17/09/2010</span>
+        </div>
+        <textarea name="note" class="text-area" type=""></textarea>
+        <button id="submit" class="post-btn">Post</button>
+      </div>
+    <!--</form>-->
+  </div>
+  <ul class="">
+    <li class="item">
+      <img class="avatar" src="http://p4ik510sj.bkt.clouddn.com/18-7-12/67501490.jpg" alt="">
+      <div class="content">
+        <div class="title">
+          <span class="nick">Jonno Riekwel</span>
+          <span class="time">17/09/2010</span>
+        </div>
+        <p>
+          hello world This my comment.
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+</body>
+<script src="javascripts/js.js"></script>
 </html>
