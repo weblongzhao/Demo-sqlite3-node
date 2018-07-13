@@ -1,24 +1,23 @@
 const path= require("path");
 var Sequelize = require('sequelize');
 
-const sequelize = new Sequelize(undefined, undefined,undefined, {
-    // sqlite! now!
+const sequelize = new Sequelize('database', 'username', 'password', {
     host: 'localhost',
     dialect: 'sqlite',
-
-    // the storage engine for sqlite
-    // - default ':memory:'
-    storage: path.join(__dirname, './database/database.sqlite')
+    pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+    },
+    storage: path.join(__dirname, '../database','database.sqlite'),
+    operatorsAliases: false
 });
 
 
-var Note = sequelize.define('note', {
-    text: {
-        type: Sequelize.STRING
-    },
-    username: {
-        type: Sequelize.STRING
-    }
+var Note = sequelize.define('user2', {
+    username: Sequelize.STRING,
+    text: Sequelize.STRING
 });
 Note.sync();
 

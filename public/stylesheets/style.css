@@ -72,3 +72,12 @@ li {
   border-style:none;
   outline: none;
 }
+
+.item img {
+  float: left;
+  margin-bottom: 5px;
+}
+
+.item .content {
+  margin-top:0;
+}
